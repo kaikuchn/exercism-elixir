@@ -1,0 +1,9 @@
+#!/bin/bash -ieu
+
+# install rebar and hex, present in base image
+install-mix-tooling
+
+# import GitHub public key for git commit signature verification
+curl https://github.com/web-flow.gpg | gpg --import
+
+asdf reshim elixir

@@ -1,0 +1,9 @@
+#!/bin/bash -ieu
+
+# get latest changes from repository
+git pull
+
+# compile application
+mix deps.get
+mix compile
+MIX_ENV=test mix compile

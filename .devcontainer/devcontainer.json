@@ -1,0 +1,21 @@
+{
+    "dockerComposeFile": [
+        "docker-compose.yml"
+    ],
+    "service": "devcontainer",
+    "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+    "onCreateCommand": ".devcontainer/bin/onCreateCommand",
+    "updateContentCommand": ".devcontainer/bin/updateContentCommand",
+    "postCreateCommand": ".devcontainer/bin/postCreateCommand",
+    "customizations": {
+        "codespaces": {
+            "repositories": {
+                "STUDITEMPS/devcontainer-base": {
+                    "permissions": {
+                        "packages": "read"
+                    }
+                }
+            }
+        }
+    }
+}
